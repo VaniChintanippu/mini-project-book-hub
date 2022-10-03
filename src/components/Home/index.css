@@ -30,7 +30,7 @@
   }
 }
 .home-slider-container {
-  background: #ffffff;
+  background: white;
   border-radius: 16px;
   padding: 18px 70px;
 }
@@ -50,4 +50,9 @@
   .desk-button {
     display: flex;
   }
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #989898;
+  font-size: 20px;
 }

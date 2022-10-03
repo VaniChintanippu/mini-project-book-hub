@@ -38,6 +38,7 @@ const apiStatusConstants = {
   success: 'SUCCESS',
   failure: 'FAILURE',
   inProgress: 'IN_PROGRESS',
+  empty: 'EMPTY',
 }
 
 class Bookshelves extends Component {
@@ -79,11 +80,15 @@ class Bookshelves extends Component {
         readStatus: eachBook.read_status,
         rating: eachBook.rating,
       }))
-
-      this.setState({
-        apiStatus: apiStatusConstants.success,
-        bookshelfData: updatedData,
-      })
+      console.log(updatedData)
+      if (updatedData === []) {
+        this.setState({apiStatus: apiStatusConstants.empty})
+      } else {
+        this.setState({
+          apiStatus: apiStatusConstants.success,
+          bookshelfData: updatedData,
+        })
+      }
     } else {
       this.setState({
         apiStatus: apiStatusConstants.failure,
@@ -119,29 +124,28 @@ class Bookshelves extends Component {
     </div>
   )
 
-  renderSuccessView = () => {
-    const {bookshelfData, searchInput} = this.state
+  renderEmptyView = () => {
+    const {searchInput} = this.state
     return (
-      <>
-        if (bookshelfData === []){' '}
-        {
-          <div>
-            <img
-              src="https://res.cloudinary.com/dyrfx9ekj/image/upload/v1664709055/Group_jdvley.png"
-              alt="no books"
-            />
-            <p> Your search for {searchInput} did not find any matches.</p>
-          </div>
-        }
-        else{' '}
-        {
-          <ul className="results-container">
-            {bookshelfData.map(book => (
-              <RenderBookshelfResults bookshelfData={book} key={book.id} />
-            ))}
-          </ul>
-        }
-      </>
+      <div className="empty-view">
+        <img
+          src="https://res.cloudinary.com/dyrfx9ekj/image/upload/v1664709055/Group_jdvley.png"
+          alt="no books"
+        />
+        <p> Your search for {searchInput} did not find any matches.</p>
+      </div>
+    )
+  }
+
+  renderSuccessView = () => {
+    const {bookshelfData} = this.state
+
+    return (
+      <ul className="results-container">
+        {bookshelfData.map(book => (
+          <RenderBookshelfResults bookshelfData={book} key={book.id} />
+        ))}
+      </ul>
     )
   }
 
@@ -154,6 +158,8 @@ class Bookshelves extends Component {
         return this.renderSuccessView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
+      case apiStatusConstants.empty:
+        return this.renderEmptyView()
       default:
         return null
     }
@@ -193,7 +199,7 @@ class Bookshelves extends Component {
         <div className="bookshelf-bottom-container">
           <div className="bookshelves-list-container">
             <h1 className="shelf-heading">Bookshelves</h1>
-            <div className="shelves-list-container">
+            <ul className="shelves-list-container">
               {bookshelvesList.map(bookshelves => (
                 <BookshelvesList
                   key={bookshelves.id}
@@ -201,7 +207,7 @@ class Bookshelves extends Component {
                   changeShelfLabel={this.changeShelfLabel}
                 />
               ))}
-            </div>
+            </ul>
           </div>
           <div className="bookshelf-results-container">
             <div className="shelf-heading-search-container">

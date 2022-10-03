@@ -8,10 +8,10 @@ const RenderBookshelfResults = props => {
 
   return (
     <Link to={`/books/${id}`}>
-      <div className="book-result">
+      <li className="book-result">
         <img src={coverPic} alt={title} />
         <div className="result-values-container">
-          <p className="title">{title}</p>
+          <h1 className="title">{title}</h1>
           <p className="author">{authorName}</p>
           <div className="rating-container">
             <p className="author">Avg Rating</p>
@@ -20,7 +20,7 @@ const RenderBookshelfResults = props => {
           </div>
           <p className="author">Status: {readStatus}</p>
         </div>
-      </div>
+      </li>
     </Link>
   )
 }

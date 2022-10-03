@@ -1,5 +1,6 @@
 .book-result {
   width: 50%;
+  list-style-type: none;
 }
 .result-values-container {
   display: flex;
@@ -7,4 +8,7 @@
 }
 .rating-container {
   display: flex;
+}
+.title {
+  text-decoration: none;
 }

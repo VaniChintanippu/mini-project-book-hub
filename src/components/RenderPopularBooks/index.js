@@ -17,6 +17,8 @@ const apiStatusConstants = {
 
 const sliderShow = {
   slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
 }
 
 class RenderPopularBooks extends Component {

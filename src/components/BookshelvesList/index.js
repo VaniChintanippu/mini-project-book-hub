@@ -7,9 +7,11 @@ const BookshelvesList = props => {
     changeShelfLabel(id)
   }
   return (
-    <button className="shelf-button" type="button" onClick={onChangeLabel}>
-      {label}
-    </button>
+    <li className="list">
+      <button className="shelf-button" type="button" onClick={onChangeLabel}>
+        {label}
+      </button>
+    </li>
   )
 }
 
