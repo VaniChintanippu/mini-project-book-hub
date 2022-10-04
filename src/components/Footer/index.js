@@ -1,7 +1,7 @@
 './index.css'
 
 const Footer = () => (
-  <div className="footer-container">
+  <div>
     <p className="footer">Contact us</p>
   </div>
 )

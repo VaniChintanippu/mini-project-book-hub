@@ -1,14 +1,40 @@
 .book-result {
-  width: 50%;
   list-style-type: none;
+  display: flex;
+  margin-right: 100px;
+  margin-bottom: 20px;
 }
 .result-values-container {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 .rating-container {
   display: flex;
 }
 .title {
-  text-decoration: none;
+  color: #334155;
+  font-size: 15px;
+  width: 150px;
+  font-weight: 500;
+  margin-top: 0;
+}
+.pic {
+  width: 100px;
+  height: 150px;
+  border-radius: 7px;
+}
+.author {
+  color: #475569;
+  font-size: 12px;
+  margin-top: 0;
+}
+.side-space {
+  margin-right: 10px;
+}
+.star {
+  color: #fbbf24;
+}
+.span-ele {
+  color: #0284c7;
 }

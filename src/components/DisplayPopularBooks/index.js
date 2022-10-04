@@ -6,7 +6,7 @@ const DisplayPopularBooks = props => {
   const {id, authorName, coverPic, title} = bookDetails
 
   return (
-    <Link to={`/books/${id}`}>
+    <Link to={`/books/${id}`} className="link-tag">
       <div className="mobile-viewing">
         <img src={coverPic} alt={title} className="cover-pic" />
         <h1 className="book-title">{title}</h1>

@@ -60,7 +60,6 @@
 }
 .results-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 .empty-view {
@@ -68,4 +67,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.render-view {
+  background-color: transparent;
 }

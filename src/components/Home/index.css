@@ -4,6 +4,8 @@
 }
 .home-bottom-container {
   margin: 40px 80px;
+  display: flex;
+  flex-direction: column;
 }
 .home-heading {
   color: #1e293b;
@@ -32,7 +34,7 @@
 .home-slider-container {
   background: white;
   border-radius: 16px;
-  padding: 18px 70px;
+  padding: 18px 60px;
 }
 .home-slider-heading {
   color: #1e293b;
@@ -42,6 +44,8 @@
 .slider-heading-button-container {
   display: flex;
   justify-content: space-between;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 .desk-button {
   display: none;
@@ -51,8 +55,11 @@
     display: flex;
   }
 }
-.slick-prev:before,
-.slick-next:before {
-  color: #989898;
-  font-size: 20px;
+
+.link-tag {
+  text-decoration: none;
+}
+.footer-icons {
+  align-self: center;
+  margin-top: 60px;
 }

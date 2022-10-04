@@ -1,11 +1,5 @@
 .footer {
   color: #3d3c3c;
-  font-weight: 600;
+  font-weight: 900;
   text-align: center;
-}
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  justify-content: center;
 }

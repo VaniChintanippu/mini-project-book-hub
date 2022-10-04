@@ -22,7 +22,7 @@ const Home = () => {
           enjoyed in the past, and we will give you surprisingly insightful
           recommendations.
         </p>
-        <Link to="/shelf">
+        <Link to="/shelf" className="link-tag">
           <button type="button" className="home-button mobile-button">
             Find Books
           </button>
@@ -30,7 +30,7 @@ const Home = () => {
         <div className="home-slider-container">
           <div className="slider-heading-button-container">
             <h1 className="home-slider-heading">Top Rated Books</h1>
-            <Link to="/shelf">
+            <Link to="/shelf" className="link-tag">
               <button type="button" className="home-button desk-button">
                 Find Books
               </button>
@@ -38,7 +38,9 @@ const Home = () => {
           </div>
           <RenderPopularBooks />
         </div>
-        <Footer />
+        <div className="footer-icons">
+          <Footer />
+        </div>
       </div>
     </div>
   )

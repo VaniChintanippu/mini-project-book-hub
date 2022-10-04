@@ -80,14 +80,14 @@ class Bookshelves extends Component {
         readStatus: eachBook.read_status,
         rating: eachBook.rating,
       }))
-      console.log(updatedData)
-      if (updatedData === []) {
-        this.setState({apiStatus: apiStatusConstants.empty})
-      } else {
+
+      if (updatedData !== []) {
         this.setState({
           apiStatus: apiStatusConstants.success,
           bookshelfData: updatedData,
         })
+      } else {
+        this.setState({apiStatus: apiStatusConstants.empty})
       }
     } else {
       this.setState({
@@ -141,7 +141,7 @@ class Bookshelves extends Component {
     const {bookshelfData} = this.state
 
     return (
-      <ul className="results-container">
+      <ul className="results-container render-view">
         {bookshelfData.map(book => (
           <RenderBookshelfResults bookshelfData={book} key={book.id} />
         ))}
@@ -228,10 +228,10 @@ class Bookshelves extends Component {
                 </button>
               </div>
             </div>
-            <div>{this.renderView()}</div>
+            <div className="render-view">{this.renderView()}</div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     )
   }
