@@ -81,7 +81,7 @@ class Bookshelves extends Component {
         rating: eachBook.rating,
       }))
 
-      if (updatedData !== []) {
+      if (updatedData.length !== 0) {
         this.setState({
           apiStatus: apiStatusConstants.success,
           bookshelfData: updatedData,

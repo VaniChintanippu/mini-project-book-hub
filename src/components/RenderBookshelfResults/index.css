@@ -1,7 +1,7 @@
 .book-result {
   list-style-type: none;
   display: flex;
-  margin-right: 100px;
+  margin-right: 200px;
   margin-bottom: 20px;
 }
 .result-values-container {

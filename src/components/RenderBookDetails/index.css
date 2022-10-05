@@ -1,4 +1,45 @@
 .image-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
+}
+.picture {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.values-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  color: #334155;
+  font-size: 23px;
+  max-width: 300px;
+}
+.author {
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+}
+.space {
+  margin-right: 13px;
+}
+.star {
+  color: #fbbf24;
+}
+span {
+  color: #0284c7;
+}
+.about-auth {
+  color: #334155;
+  font-size: 20px;
+  font-weight: 500;
+}
+.about-auth-para {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 400;
 }
