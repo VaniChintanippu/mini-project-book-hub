@@ -9,17 +9,17 @@ const RenderBookshelfResults = props => {
   return (
     <Link to={`/books/${id}`} className="link-tag">
       <li className="book-result">
-        <img src={coverPic} alt={title} className="pic" />
+        <img src={coverPic} alt={title} className="pic-shelf" />
         <div className="result-values-container">
-          <h1 className="title">{title}</h1>
-          <p className="author">{authorName}</p>
+          <h1 className="title-shelf">{title}</h1>
+          <p className="author-shelf">{authorName}</p>
           <div className="rating-container">
-            <p className="author side-space">Avg Rating</p>
-            <BsFillStarFill className="side-space star" />
-            <p className="author">{rating}</p>
+            <p className="author-shelf side-space-shelf">Avg Rating</p>
+            <BsFillStarFill className="side-space-shelf star-shelf" />
+            <p className="author-shelf">{rating}</p>
           </div>
-          <p className="author">
-            Status: <span className="span-ele">{readStatus}</span>
+          <p className="author-shelf">
+            Status: <span className="span-ele-shelf">{readStatus}</span>
           </p>
         </div>
       </li>

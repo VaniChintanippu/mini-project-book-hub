@@ -14,7 +14,7 @@ const RenderBookDetails = props => {
   } = bookDetails
 
   return (
-    <div className="width">
+    <div>
       <div className="image-container">
         <img src={coverPic} alt={title} className="picture" />
         <div className="values-container">

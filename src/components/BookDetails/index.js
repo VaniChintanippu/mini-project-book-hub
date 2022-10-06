@@ -121,7 +121,7 @@ class BookDetails extends Component {
     return (
       <div className="book-bg-details-container">
         <Header />
-        <div className="render-view">
+        <div className="render-view-detail">
           {this.renderView()}
           <Footer />
         </div>

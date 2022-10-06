@@ -26,7 +26,7 @@
   margin: 50px;
   max-width: 1500px;
 }
-.render-view {
+.render-view-detail {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -12,29 +12,29 @@
 .rating-container {
   display: flex;
 }
-.title {
+.title-shelf {
   color: #334155;
   font-size: 15px;
   width: 150px;
   font-weight: 500;
   margin-top: 0;
 }
-.pic {
+.pic-shelf {
   width: 100px;
   height: 150px;
   border-radius: 7px;
 }
-.author {
+.author-shelf {
   color: #475569;
   font-size: 12px;
   margin-top: 0;
 }
-.side-space {
+.side-space-shelf {
   margin-right: 10px;
 }
-.star {
+.star-shelf {
   color: #fbbf24;
 }
-.span-ele {
+.span-ele-shelf {
   color: #0284c7;
 }
