@@ -1,5 +1,18 @@
 .footer {
   color: #3d3c3c;
-  font-weight: 900;
-  text-align: center;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.foot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  margin-right: 15px;
+  color: #3d3c3c;
+}
+.icon-youtube {
+  color: #3d3c3c;
 }

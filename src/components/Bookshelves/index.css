@@ -1,21 +1,25 @@
 .bookshelf-bg-container {
   background: #f5f7fa;
-  height: 100vh;
 }
 .bookshelf-bottom-container {
   margin: 40px 80px;
+  display: flex;
+  flex-direction: column;
+}
+.bookshelf-bottom-container-2 {
   display: flex;
 }
 .bookshelves-list-container {
   background-color: white;
   width: 300px;
-  padding: 20px;
   height: 87vh;
 }
 .shelf-heading {
   color: #334155;
   font-size: 15px;
   font-weight: 600;
+  margin-left: 44px;
+  margin-top: 26px;
 }
 .shelves-list-container {
   list-style-type: none;
@@ -33,10 +37,12 @@
   color: #334155;
   font-size: 20px;
   font-weight: 600;
+  margin-left: 50px;
 }
 .search-container {
   border: 1px #cbd5e1 solid;
   align-self: flex-end;
+  margin-right: 50px;
 }
 .search-input {
   border: 0;
@@ -46,6 +52,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 .failure-para {
   color: #475569;
@@ -69,6 +77,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 .render-view {
   background-color: transparent;
@@ -78,4 +87,18 @@
   background: #edeff1;
   padding: 5px 15px;
   color: #94a3b8;
+}
+.empty-para {
+  color: #334155;
+  font-size: 18px;
+  font-weight: 600;
+}
+.products-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+.footer-container {
+  align-self: center;
 }

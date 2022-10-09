@@ -132,7 +132,9 @@ class Bookshelves extends Component {
           src="https://res.cloudinary.com/dyrfx9ekj/image/upload/v1664709055/Group_jdvley.png"
           alt="no books"
         />
-        <p> Your search for {searchInput} did not find any matches.</p>
+        <p className="empty-para">
+          Your search for {searchInput} did not find any matches.
+        </p>
       </div>
     )
   }
@@ -196,42 +198,47 @@ class Bookshelves extends Component {
     return (
       <div className="bookshelf-bg-container">
         <Header />
+
         <div className="bookshelf-bottom-container">
-          <div className="bookshelves-list-container">
-            <h1 className="shelf-heading">Bookshelves</h1>
-            <ul className="shelves-list-container">
-              {bookshelvesList.map(bookshelves => (
-                <BookshelvesList
-                  key={bookshelves.id}
-                  bookshelvesDetails={bookshelves}
-                  changeShelfLabel={this.changeShelfLabel}
-                />
-              ))}
-            </ul>
-          </div>
-          <div className="bookshelf-results-container">
-            <div className="shelf-heading-search-container">
-              <h1 className="results-heading">{bookshelvesLabel} Books</h1>
-              <div className="search-container">
-                <input
-                  type="search"
-                  className="search-input"
-                  onChange={this.onChangeSearchInput}
-                  value={searchInput}
-                />
-                <button
-                  type="button"
-                  testid="searchButton"
-                  onClick={this.onClickSearch}
-                  className="search-icon-shelf"
-                >
-                  <BsSearch />
-                </button>
-              </div>
+          <div className="bookshelf-bottom-container-2">
+            <div className="bookshelves-list-container">
+              <h1 className="shelf-heading">Bookshelves</h1>
+              <ul className="shelves-list-container">
+                {bookshelvesList.map(bookshelves => (
+                  <BookshelvesList
+                    key={bookshelves.id}
+                    bookshelvesDetails={bookshelves}
+                    changeShelfLabel={this.changeShelfLabel}
+                  />
+                ))}
+              </ul>
             </div>
-            <div className="render-view">{this.renderView()}</div>
+            <div className="bookshelf-results-container">
+              <div className="shelf-heading-search-container">
+                <h1 className="results-heading">{bookshelvesLabel} Books</h1>
+                <div className="search-container">
+                  <input
+                    type="search"
+                    className="search-input"
+                    onChange={this.onChangeSearchInput}
+                    value={searchInput}
+                  />
+                  <button
+                    type="button"
+                    testid="searchButton"
+                    onClick={this.onClickSearch}
+                    className="search-icon-shelf"
+                  >
+                    <BsSearch />
+                  </button>
+                </div>
+              </div>
+              <div className="render-view">{this.renderView()}</div>
+            </div>
           </div>
-          <Footer />
+          <div className="footer-container">
+            <Footer />
+          </div>
         </div>
       </div>
     )
