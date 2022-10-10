@@ -48,6 +48,7 @@ class Bookshelves extends Component {
     searchInput: '',
     apiStatus: apiStatusConstants.initial,
     bookshelfData: [],
+    activeShelvesId: '22526c8e-680e-4419-a041-b05cc239ece4',
   }
 
   componentDidMount() {
@@ -167,12 +168,13 @@ class Bookshelves extends Component {
     }
   }
 
-  changeShelfLabel = id => {
-    bookshelvesList.map(book =>
+  changeShelfLabel = async id => {
+    await bookshelvesList.map(book =>
       book.id === id
         ? this.setState({
             bookshelvesLabel: book.label,
             bookshelvesValue: book.value,
+            activeShelvesId: id,
           })
         : null,
     )
@@ -190,7 +192,7 @@ class Bookshelves extends Component {
   }
 
   render() {
-    const {bookshelvesLabel, searchInput} = this.state
+    const {bookshelvesLabel, searchInput, activeShelvesId} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken === undefined) {
       return <Redirect to="/login" />
@@ -209,6 +211,7 @@ class Bookshelves extends Component {
                     key={bookshelves.id}
                     bookshelvesDetails={bookshelves}
                     changeShelfLabel={this.changeShelfLabel}
+                    activeShelvesId={activeShelvesId}
                   />
                 ))}
               </ul>

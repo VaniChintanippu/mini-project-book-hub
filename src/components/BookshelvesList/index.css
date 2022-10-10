@@ -9,3 +9,6 @@
 .list {
   margin-left: 0;
 }
+.active {
+  color: #0284c7;
+}
